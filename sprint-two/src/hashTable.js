@@ -28,12 +28,9 @@ HashTable.prototype.insert = function(k, v) {
   }
 
   this._storage.set(index, bucket); 
-  console.log(index);
-  console.log(this._storage.get(3));
 };
 
 HashTable.prototype.retrieve = function(k) {
-// debugger;
   // Get key in storage array
   var index = getIndexBelowMaxForKey(k, this._limit);
   var bucket = this._storage.get(index); 
